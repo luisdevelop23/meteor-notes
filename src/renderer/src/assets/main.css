@@ -1,13 +1,22 @@
 @import './base.css';
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
   overflow: hidden;
-  background-image: url('./wavy-lines.svg');
-  background-size: cover;
   user-select: none;
+
+  /* Combinamos el gradiente superior-inferior con tu SVG de fondo */
+  background-image: 
+    linear-gradient(
+      to bottom, 
+      #000000 0%,       /* Tu negro/azul profundo en el top */
+      #020308 65%,      /* Mantiene la oscuridad hasta pasar la mitad */
+      rgba(12, 20, 168, 0.15) 100% /* El "glow" claro en el bottom (Azul Meteor con opacidad) */
+    );
+  
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 code {
