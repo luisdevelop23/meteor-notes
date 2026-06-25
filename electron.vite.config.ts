@@ -6,6 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   main: {},
   preload: {},
+  
   renderer: {
     resolve: {
       alias: {

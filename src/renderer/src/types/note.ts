@@ -18,6 +18,7 @@ export interface Note extends BaseEntity {
   pinned: boolean; // * las notas fijadas aparecen primero en la lista
   folder_id: string | null; // * null = raíz, sin carpeta
   tags: string[]; // * ej: ['trabajo', 'ideas', 'javascript']
+  
 }
 
 /*

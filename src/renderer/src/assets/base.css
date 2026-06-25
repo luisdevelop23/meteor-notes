@@ -1,34 +1,129 @@
 :root {
-  --ev-c-white: #ffffff;
-  --ev-c-white-soft: #f8f8f8;
-  --ev-c-white-mute: #f2f2f2;
 
-  --ev-c-black: #1b1b1f;
-  --ev-c-black-soft: #222222;
-  --ev-c-black-mute: #282828;
+  /* ── Base ─────────────────────────────────────────────────────── */
+  --mn-black:          #060608;
+  --mn-black-soft:     #0d0d12;
+  --mn-black-mute:     #111118;
 
-  --ev-c-gray-1: #515c67;
-  --ev-c-gray-2: #414853;
-  --ev-c-gray-3: #32363f;
+  /* ── Superficies (glass layers) ───────────────────────────────── */
+  --mn-surface-1:      rgba(255, 255, 255, 0.04);   /* sidebar, paneles base    */
+  --mn-surface-2:      rgba(255, 255, 255, 0.07);   /* cards, inputs            */
+  --mn-surface-3:      rgba(255, 255, 255, 0.10);   /* hover, selected          */
+  --mn-surface-4:      rgba(255, 255, 255, 0.14);   /* tooltips, dropdowns      */
 
-  --ev-c-text-1: rgba(255, 255, 245, 0.86);
-  --ev-c-text-2: rgba(235, 235, 245, 0.6);
-  --ev-c-text-3: rgba(235, 235, 245, 0.38);
+  /* ── Bordes glass ─────────────────────────────────────────────── */
+  --mn-border-1:       rgba(255, 255, 255, 0.06);   /* borde sutil base         */
+  --mn-border-2:       rgba(255, 255, 255, 0.10);   /* borde visible            */
+  --mn-border-3:       rgba(255, 255, 255, 0.16);   /* borde hover / focus      */
 
-  --ev-button-alt-border: transparent;
-  --ev-button-alt-text: var(--ev-c-text-1);
-  --ev-button-alt-bg: var(--ev-c-gray-3);
-  --ev-button-alt-hover-border: transparent;
-  --ev-button-alt-hover-text: var(--ev-c-text-1);
-  --ev-button-alt-hover-bg: var(--ev-c-gray-2);
+  /* ── Texto ────────────────────────────────────────────────────── */
+  --mn-text-1:         rgba(240, 244, 255, 0.95);   /* texto principal          */
+  --mn-text-2:         rgba(200, 210, 240, 0.65);   /* texto secundario / muted */
+  --mn-text-3:         rgba(180, 190, 220, 0.38);   /* placeholder / deshabilitado */
+
+  /* ── Azul primario ────────────────────────────────────────────── */
+  --mn-blue:           #2563eb;                      /* acción principal         */
+  --mn-blue-light:     #3b82f6;                      /* hover                    */
+  --mn-blue-lighter:   #60a5fa;                      /* íconos activos, links    */
+  --mn-blue-dim:       rgba(37, 99, 235, 0.15);     /* fondo active/selected    */
+  --mn-blue-glow:      rgba(37, 99, 235, 0.30);     /* box-shadow glow          */
+  --mn-blue-border:    rgba(37, 99, 235, 0.45);     /* borde focus              */
+
+  /* ── Semánticos ───────────────────────────────────────────────── */
+  --mn-success:        #22c55e;
+  --mn-success-dim:    rgba(34, 197, 94, 0.15);
+  --mn-warning:        #f59e0b;
+  --mn-warning-dim:    rgba(245, 158, 11, 0.15);
+  --mn-danger:         #ef4444;
+  --mn-danger-dim:     rgba(239, 68, 68, 0.15);
+  --mn-info:           #06b6d4;
+  --mn-info-dim:       rgba(6, 182, 212, 0.15);
+
+  /* ── Prioridades (badges de tareas) ──────────────────────────── */
+  --mn-priority-low:      #6b7280;
+  --mn-priority-medium:   #f59e0b;
+  --mn-priority-high:     #f97316;
+  --mn-priority-urgent:   #ef4444;
+
+  /* ── Colores de etiqueta (ColorTag) ──────────────────────────── */
+  --mn-tag-gray:       #6b7280;
+  --mn-tag-red:        #ef4444;
+  --mn-tag-orange:     #f97316;
+  --mn-tag-yellow:     #eab308;
+  --mn-tag-green:      #22c55e;
+  --mn-tag-blue:       #3b82f6;
+  --mn-tag-purple:     #a855f7;
+  --mn-tag-pink:       #ec4899;
+
+  /* ── Scrum columnas ───────────────────────────────────────────── */
+  --mn-scrum-todo:        #6b7280;
+  --mn-scrum-todo-dim:    rgba(107, 114, 128, 0.12);
+  --mn-scrum-progress:    #2563eb;
+  --mn-scrum-progress-dim:rgba(37, 99, 235, 0.12);
+  --mn-scrum-done:        #22c55e;
+  --mn-scrum-done-dim:    rgba(34, 197, 94, 0.12);
+
+  /* ── Efectos glass ────────────────────────────────────────────── */
+  --mn-blur-sm:        blur(8px);
+  --mn-blur-md:        blur(16px);
+  --mn-blur-lg:        blur(24px);
+  --mn-blur-xl:        blur(40px);
+
+  /* ── Layout ───────────────────────────────────────────────────── */
+  --mn-sidebar-width:       220px;
+  --mn-sidebar-collapsed:   64px;
+  --mn-notes-panel:         280px;
+  --mn-tasks-panel:         260px;
+
+  /* ── Radios ───────────────────────────────────────────────────── */
+  --mn-radius-xs:      4px;
+  --mn-radius-sm:      8px;
+  --mn-radius-md:      12px;
+  --mn-radius-lg:      16px;
+  --mn-radius-xl:      20px;
+  --mn-radius-2xl:     24px;
+  --mn-radius-full:    9999px;
+
+  /* ── Espaciado ────────────────────────────────────────────────── */
+  --mn-space-1:        4px;
+  --mn-space-2:        8px;
+  --mn-space-3:        12px;
+  --mn-space-4:        16px;
+  --mn-space-5:        20px;
+  --mn-space-6:        24px;
+  --mn-space-8:        32px;
+
+  /* ── Tipografía ───────────────────────────────────────────────── */
+  --mn-font:           Inter, -apple-system, BlinkMacSystemFont,
+                       'Segoe UI', Roboto, sans-serif;
+  --mn-font-mono:      'JetBrains Mono', 'Fira Code',
+                       'Cascadia Code', Menlo, monospace;
+
+  --mn-text-xs:        11px;
+  --mn-text-sm:        12px;
+  --mn-text-base:      13px;
+  --mn-text-md:        14px;
+  --mn-text-lg:        16px;
+  --mn-text-xl:        20px;
+  --mn-text-2xl:       24px;
+
+  /* ── Transiciones ─────────────────────────────────────────────── */
+  --mn-transition:     150ms ease;
+  --mn-transition-md:  250ms ease;
+
+  /* ── Sombras / Glows ──────────────────────────────────────────── */
+  --mn-shadow-sm:      0 1px 3px rgba(0, 0, 0, 0.4);
+  --mn-shadow-md:      0 4px 16px rgba(0, 0, 0, 0.5);
+  --mn-shadow-glow:    0 0 16px var(--mn-blue-glow);
+  --mn-shadow-glow-sm: 0 0 8px var(--mn-blue-glow);
 }
 
 :root {
-  --color-background: var(--ev-c-black);
-  --color-background-soft: var(--ev-c-black-soft);
-  --color-background-mute: var(--ev-c-black-mute);
+  --color-background: var(--mn-black);
+  --color-background-soft: var(--mn-black-soft);
+  --color-background-mute: var(--mn-black-mute);
 
-  --color-text: var(--ev-c-text-1);
+  --color-text: var(--mn-text-1);
 }
 
 *,
